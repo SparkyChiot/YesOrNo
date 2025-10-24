@@ -2,8 +2,33 @@
 <html lang="en">
   <head>
     <style>
-      .button{
-        
+      *{
+        text-align: center;
+      }
+      button{
+        height:200px;
+        width:300px;
+        border-radius: 20px;
+      }
+      #yes{
+        border-color:darkgreen;
+        background-color:darkseagreen;
+      }
+      #no{
+        border-color:brown;
+        background-color:lightcoral
+      }
+      #yes:hover{
+        background-color:forestgreen;
+      }
+      #no:hover{
+        background-color:crimson;
+      }
+      #yes:active{
+        background-color:darkolivegreen;
+      }
+      #no:active{
+        background-color:darkred;
       }
     </style>
     <meta charset="utf-8" />
@@ -11,8 +36,14 @@
   </head>
   <body>
   
-    <button onclick = "catMeow.play();" onmouseover = "style='background-color: green;'">YES</button>
-    <button onclick = "growl.play();">NO</button>
+    <button id="yes" onclick = "catMeow.play(); ">YES</button>
+    <button id="no" onclick = "growl.play();">NO</button>
+    <br>
+    <label for="changeYesButton">Yes Button Text</label>
+    <label for="changeNoButton">No Button Text</label>
+  <br>
+  <input type="text" id="changeYesButton" name="changeYesButton">
+  <input type="text" id="changeNoButton" name="changeNoButton">
     
     <script>
     let catMeow = new Audio("catmeow.mp3");
