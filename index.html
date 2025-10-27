@@ -42,21 +42,12 @@
     <label for="changeYesButton">Yes Button Text</label>
     <label for="changeNoButton">No Button Text</label>
   <br>
-  <input type="text" id="changeYesButton" name="changeYesButton" onInput="yesButtonFunc()">
-  <input type="text" id="changeNoButton" name="changeNoButton">
-  <br>
-  <input type="submit" value="Submit">
+  <input type="text" id="changeYesButton" name="changeYesButton" onInput="document.getElementById('yes').innerHTML = this.value">
+  <input type="text" id="changeNoButton" name="changeNoButton" onInput="document.getElementById('no').innerHTML = this.value">
     
     <script>
     let catMeow = new Audio("catmeow.mp3");
     let growl = new Audio("beastgrowl.mp3");
-    let yesInput
-    let noInput
-
-    function yesButtonFunc(){
-        yesInput = this.value
-        document.getElementById("yes").innerHTML = yesInput
-    }
     </script>
   </body>
 </html>
