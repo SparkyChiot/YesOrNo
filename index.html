@@ -35,19 +35,28 @@
 
   </head>
   <body>
-  
+
     <button id="yes" onclick = "catMeow.play(); ">YES</button>
     <button id="no" onclick = "growl.play();">NO</button>
     <br>
     <label for="changeYesButton">Yes Button Text</label>
     <label for="changeNoButton">No Button Text</label>
   <br>
-  <input type="text" id="changeYesButton" name="changeYesButton">
+  <input type="text" id="changeYesButton" name="changeYesButton" onInput="yesButtonFunc()">
   <input type="text" id="changeNoButton" name="changeNoButton">
+  <br>
+  <input type="submit" value="Submit">
     
     <script>
     let catMeow = new Audio("catmeow.mp3");
     let growl = new Audio("beastgrowl.mp3");
+    let yesInput
+    let noInput
+
+    function yesButtonFunc(){
+        yesInput = this.value
+        document.getElementById("yes").innerHTML = yesInput
+    }
     </script>
   </body>
 </html>
